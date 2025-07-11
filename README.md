@@ -37,6 +37,12 @@ MVT, la lógica de control ya esta implementada.
 Django usa el patrón MVT.
 
 ### ¿Cómo se estructura un proyecto en Django? Explicar brevemente el rol de los modelos, vistas, templates y URLs.
+El rol _modelo_ se utiliza para la creación y mantenimiento de las tablas de base de datos.
+El rol _vista_ define las vistas que podemos tener (lo que ve u obtiene un usuario) donde los datos se obtiene a
+partir de los modelos obtenidos.
+El rol _plantilla_ nos permite modificar la salida que obtenemos de las vistas. Por ejemplo, podemos crear código HTML 
+usando las plantillas adecuadas.
+
 Para crear un proyecto en django, primero debemos ejecutar lo siguiente:
 ```commandline
 django-admin startproject <mysite> .
@@ -70,7 +76,23 @@ Esto creará una carpeta con el nombre _\<myapp\>_ con el siguiente contenido:
 Con esto ya podríamos empezar a trabajar en nuestro proyecto django.
 
 ### ¿Cuál es el flujo de datos entre un formulario HTML y la base de datos en Django?
+1. El usuario solicita información usando una de las vistas definidas.
+2. Dentro de la vista, django usa los modelos definidos para obtener la información requerida de la base de datos.
+3. La información obtenida se formatea usando una de las plantillas definidas, que genera código HTML y se presenta al 
+usuario.
 
 ### ¿Qué herramientas o comandos ofrece Django para facilitar el desarrollo de un CRUD, para qué es cada una? (Por ejemplo: startapp, makemigrations, migrate, runserver, ModelForm, admin, etc.)
+Hay varias herramientas, e aqui alguna de ellas:
+- ```django-admin startproject <name>``` Crea un proyecto django con el nombre indicado.
+- ```python manage.py startapp <name>``` Crea una aplicación con el nombre indicado.
+- ```django-admin run server``` Inicia el servidor de django.
+- ```django-admin startproject migrate``` Migra los modelos definidos.
+- ```django-admin makemigrations <app_name>``` Genera las migraciones para la aplicación dada.
+- ```django-admin sqlmigrate <app_name> <number>``` Crea las tablas en la base de datos para la aplicación dada y número
+- ```django-admin createsuperuser``` Crea un usuario admin para la app Admin.
+de migración indicado.
+
 
 ### ¿Cómo funciona el Admin de Django?
+El admin de django es una aplicación web que podemos usar para gestionar usuarios y navegar por las tablas de la
+aplicación. Podemos añadir, modificar y borrar entradas de las tablas.
