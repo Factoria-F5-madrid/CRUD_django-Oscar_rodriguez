@@ -89,8 +89,9 @@ Hay varias herramientas, e aqui alguna de ellas:
 - ```django-admin startproject migrate``` Migra los modelos definidos.
 - ```django-admin makemigrations <app_name>``` Genera las migraciones para la aplicación dada.
 - ```django-admin sqlmigrate <app_name> <number>``` Crea las tablas en la base de datos para la aplicación dada y número
-- ```django-admin createsuperuser``` Crea un usuario admin para la app Admin.
 de migración indicado.
+- ```django-admin createsuperuser``` Crea un usuario admin para la app Admin.
+
 
 
 ### ¿Cómo funciona el Admin de Django?
