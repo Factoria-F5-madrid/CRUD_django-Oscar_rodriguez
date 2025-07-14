@@ -90,10 +90,9 @@ Con esto ya podríamos empezar a trabajar en nuestro proyecto django.
 
 ### ¿Cuál es el flujo de datos entre un formulario HTML y la base de datos en Django?
 
-1. El usuario solicita información usando una de las vistas definidas.
-2. Dentro de la vista, django usa los modelos definidos para obtener la información requerida de la base de datos.
-3. La información obtenida se formatea usando una de las plantillas definidas, que genera código HTML y se presenta al
-   usuario.
+1. El usuario rellena el formulario.
+2. El formulario se envia al servidor django, que gestiona que el lo que tiene que hacer (crear, actualizar...) usando las vistas
+3. El resultado final (correcto o no) se muestra al usuario.
 
 ### ¿Qué herramientas o comandos ofrece Django para facilitar el desarrollo de un CRUD, para qué es cada una? (Por ejemplo: startapp, makemigrations, migrate, runserver, ModelForm, admin, etc.)
 
