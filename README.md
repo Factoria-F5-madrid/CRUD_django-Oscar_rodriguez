@@ -47,6 +47,7 @@ El rol _vista_ define las vistas que podemos tener (lo que ve u obtiene un usuar
 partir de los modelos obtenidos.
 El rol _plantilla_ nos permite modificar la salida que obtenemos de las vistas. Por ejemplo, podemos crear código HTML
 usando las plantillas adecuadas.
+El rol _url_ se encarga de definir las urls disponibles en django, relacionando ademas las urls con las vistas.
 
 Para crear un proyecto en django, primero debemos ejecutar lo siguiente:
 
